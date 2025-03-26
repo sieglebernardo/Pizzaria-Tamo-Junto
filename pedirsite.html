@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Pizza</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #930400;
+            font-size: 2em;
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        td {
+            padding: 13px;
+            vertical-align:auto;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], input[type="date"], input[type="tel"], select {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        input[type="submit"], input[type="reset"], input[type="url"] {
+            background-color: #930400;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #930400;
+        }
+        .gender-selection, .marital-status {
+            display: flex;
+            justify-content: space-between;
+        }
+        .gender-selection input, .marital-status input {
+            margin-right: 10px;
+        }
+        .form-footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preencha os dados para fazer um pedido!</h1>
+
+    <form>
+        <table>
+            <tr>
+                <td><label for="nome">Nome Completo:</label></td>
+                <td><input type="text" id="nome" name="nome" maxlength="50" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" id="email" name="email" maxlength="50" required></td>
+            </tr>
+            <tr>
+                <td><label for="senha">Senha:</label></td>
+                <td><input type="password" id="senha" name="senha" maxlength="20" required></td>
+            </tr>
+            <tr>
+                <td><label for="telefone">Telefone:</label></td>
+                <td><input type="tel" id="telefone" name="telefone" maxlength="15" required></td>
+            </tr>
+            <tr>
+                <td><label for="endereco">Endereço:</label></td>
+                <td><input type="text" id="endereco" name="endereco" maxlength="100" required></td>
+            </tr>
+            <tr>
+                <td><label for="estado">Estado:</label></td>
+                <td><input type="text" id="estado" name="estado" maxlength="50" required></td>
+            </tr>
+            <tr>
+                <td><label for="data">Data de Nascimento:</label></td>
+                <td><input type="date" id="data" name="data" required></td>
+            </tr>
+            <tr>
+                <td><label for="genero">Gênero:</label></td>
+                <td class="gender-selection">
+                    <input type="radio" name="genero" id="feminino" value="feminino"><label for="feminino">Feminino</label>
+                    <input type="radio" name="genero" id="masculino" value="masculino"><label for="masculino">Masculino</label>
+                    <input type="radio" name="genero" id="outro" value="outro"><label for="outro">Outro</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="form-footer">
+                    <input type="submit" value="Fazer Cadastro">
+                    <input type="reset" value="Limpar Campos">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="form-footer">
+                    <h4>Já possui uma conta?</h4>
+                    <a href ="login.html" target="_blank"><input type="url" value="Fazer Login"></a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
