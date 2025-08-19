@@ -1,166 +1,128 @@
+/* RESET */
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff8ee;
-}
-.top-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px 10px;
-}
-.top-container a {
-    justify-content: flex-end;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    color: #930400;
-    padding: 20px 40px;
-    border-radius: 40px;
-    margin: 0 5px;
-    font-size: 20px;
-}
-.top-container a:hover {
-    background-color: #01984a;
-}
-.logo1 {
-    margin-left: 40px;
-}
-.logo{
-  align-items: left;
-}
-.caixavermelha{
-  background-color: #ff0000;
-    color: #000000;
-    padding: 10px 20px; 
-    border-radius: 10px;
-    text-align: center;
-    font-size: 25px;
-    position: absolute;
-    right: 570px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.pizza{
-    img{
-        width: 570px;
-        height: 570px;
-    }
-    position: absolute;
-    right: 0px;
-    top: 23%;
-}
-.caixaverde {
-    background-color: #01984a;
-    color: #930400;
-    padding: 30px;
-    text-align: center;
-    font-size: 18px;
-    position: relative;
-    top: 130px;
-}
-h4{
-    color: #930400;
-    font-size: 20px;
-    text-align: center;
-}h3{
-    color: #930400;
-    font-size: 35px;
-    text-align: center;
-}
-h1{
-    font-size: 55px;
-}
-h2{
-    text-align: center;
-}
-.sabores-container {
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    padding: 10px;
-}
-.coluna {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.coluna li {
-    color: #930400;
-}
-.faixavermelha {
-    background-color: #930400;
-    color: #01984a; 
-    padding: 30px; 
-    text-align: center;
-    font-size: 18px;
-    position: relative; 
-    top: 130px;
-}
-.texto {
-    color:#01984a;
-    position: relative;
-    top:160px;
-    text-align: justify;
-    align-items: center;
-    margin-left: 50px;
-}
-.faixaverde {
-    background-color: #01984a; 
-    color: #930400;
-    padding: 10px;
-    text-align: center; 
-    font-size: 18px;
-    position: relative;
-    top: 200px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff8ee;
+  line-height: 1.5;
+}
+
+/* NAVBAR */
+.top-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-container a {
+  text-decoration: none;
+  color: #930400;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.top-container a:hover {
+  background-color: #01984a;
+  color: #fff;
+}
+
+/* LOGO */
+.logo1 img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* HERO SECTION */
+.caixavermelha {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.pizza img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* SEÇÕES */
+.caixaverde, .faixavermelha, .faixaverde {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.caixaverde { background: #01984a; color: #fff; }
+.faixavermelha { background: #930400; color: #fff; }
+.faixaverde { background: #01984a; color: #fff; }
+
+/* CARDÁPIO */
+.sabores-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sabores-container .coluna {
+  list-style: none;
+  padding: 10px;
+}
+
+.sabores-container h4 {
+  color: #930400;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .sabores-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* LISTA CONTATO */
 .lista {
-    color: #930400;
-    position: relative;
-    top: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
 }
 
 .lista .item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.lista img {
-    width: 5%;
-    height: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #930400;
+  font-size: 1rem;
 }
 
-.lista h2 {
-    margin: 0;
-    font-size: 16px;
+.lista img {
+  width: 24px;
+  height: auto;
 }
-.logo{
-    margin-left: 60%;
-}
+
+/* BOTÃO FIXO */
 .pedirnosite {
-    position: sticky; 
-    bottom: 0; 
-    width: 300px;
-    height: auto;
-    align-items: center;
-    margin-left: 40%;
-}
-.tamanhos {
-    align-items: center;
-    gap: 20px;
-}
-.tamanhospizza {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  display: block;
+  max-width: 250px;
+  margin: 30px auto;
 }
